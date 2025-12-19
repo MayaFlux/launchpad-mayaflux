@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=none
+kind: recipe
+name: mayaflux-dev
+description: "Build recipe for MayaFlux development builds"
+version: "{debversion}~git{gitdate}~{gitcommit}"
+
+fetch:
+  - type: git
+    url: "https://github.com/MayaFlux/MayaFlux.git"
+    branch: "main"
+
+fetch-debian:
+  - type: git
+    url: "https://github.com/MayaFlux/launchpad-MayaFlux.git"
+    branch: "main"
+    subdirectory: "ubuntu"
+
+build:
+  architecture: any
+  series:
+    - questing # Ubuntu 25.10 (Questing Quokka)
+    # Add 'resolute' when Ubuntu 26.04 LTS is released
+  pocket: universe
+  ppa: mayaflux/mayaflux-dev
