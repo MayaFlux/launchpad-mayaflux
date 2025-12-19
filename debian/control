@@ -35,7 +35,6 @@ Build-Depends:
     doxygen,
     graphviz,
     git
-
 Standards-Version: 4.7.0
 Homepage: https://github.com/MayaFlux/MayaFlux
 Vcs-Browser: https://github.com/MayaFlux/MayaFlux
@@ -44,37 +43,37 @@ Vcs-Git: https://github.com/MayaFlux/MayaFlux.git
 Package: mayaflux-dev
 Architecture: any
 Depends:
- ${shlibs:Depends},
- ${misc:Depends},
- cmake (>= 3.28),
- ninja-build,
- pkg-config,
- g++-15,
- clang-21,
- llvm-21,
- llvm-21-dev,
- libclang-21-dev,
- libtbb-dev,
- vulkan-validationlayers,
- vulkan-tools,
- vulkan-utility-libraries-dev,
- libvulkan-dev,
- libvulkan1,
- wayland-protocols,
- libglfw3-dev (>= 3.4),
- libglfw3-wayland,
- glslc,
- libshaderc-dev,
- libglm-dev,
- libeigen3-dev,
- libmagicenum-dev,
- libstb-dev,
- librtaudio-dev,
- libavcodec-dev,
- libavformat-dev,
- libswscale-dev
+    ${shlibs:Depends},
+    ${misc:Depends},
+    cmake (>= 3.28),
+    ninja-build,
+    pkg-config,
+    g++-15,
+    clang-21,
+    llvm-21,
+    llvm-21-dev,
+    libclang-21-dev,
+    libtbb-dev,
+    vulkan-validationlayers,
+    vulkan-tools,
+    vulkan-utility-libraries-dev,
+    libvulkan-dev,
+    libvulkan1,
+    wayland-protocols,
+    libglfw3-dev (>= 3.4),
+    libglfw3-wayland,
+    glslc,
+    libshaderc-dev,
+    libglm-dev,
+    libeigen3-dev,
+    libmagicenum-dev,
+    libstb-dev,
+    librtaudio-dev,
+    libavcodec-dev,
+    libavformat-dev,
+    libswscale-dev
 Suggests:
- mayaflux-dev-doc
+    mayaflux-dev-doc
 Description: Modern C++ framework for real-time graphics and audio with JIT
  MayaFlux is a modern C++23 framework for real-time graphics and audio
  processing with JIT compilation and live coding capabilities.
