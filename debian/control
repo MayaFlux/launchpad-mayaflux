@@ -32,8 +32,6 @@ Build-Depends:
     libavcodec-dev,
     libavformat-dev,
     libswscale-dev,
-    doxygen,
-    graphviz,
     git
 Standards-Version: 4.7.0
 Homepage: https://github.com/MayaFlux/MayaFlux

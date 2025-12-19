@@ -19,20 +19,11 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	dh_auto_install
-	
 	install -d debian/mayaflux-dev/etc/profile.d
-	cat > debian/mayaflux-dev/etc/profile.d/mayaflux.sh << 'EOF'
-#!/bin/sh
-export MAYAFLUX_ROOT="/usr"
-export CMAKE_PREFIX_PATH="/usr:${CMAKE_PREFIX_PATH}"
-export PATH="/usr/lib/llvm-21/bin:${PATH}"
-EOF
+	printf '#!/bin/sh\nexport MAYAFLUX_ROOT="/usr"\nexport CMAKE_PREFIX_PATH="/usr:$${CMAKE_PREFIX_PATH}"\nexport PATH="/usr/lib/llvm-21/bin:$${PATH}"\n' > debian/mayaflux-dev/etc/profile.d/mayaflux.sh
 	chmod 755 debian/mayaflux-dev/etc/profile.d/mayaflux.sh
-	
 	install -d debian/mayaflux-dev-doc/usr/share/doc/mayaflux-dev/html
-	if [ -d docs/html ]; then \
-		cp -r docs/html/* debian/mayaflux-dev-doc/usr/share/doc/mayaflux-dev/html/; \
-	fi
+	if [ -d docs/html ]; then cp -r docs/html/* debian/mayaflux-dev-doc/usr/share/doc/mayaflux-dev/html/; fi
 
 override_dh_auto_clean:
 	dh_auto_clean
