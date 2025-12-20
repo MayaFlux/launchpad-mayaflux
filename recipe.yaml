@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=none
 kind: recipe
-name: mayaflux-dev
+name: mayaflux-edge
 description: "Build recipe for MayaFlux development builds"
 version: "{debversion}~git{gitdate}~{gitcommit}"
 
@@ -20,5 +20,5 @@ build:
   series:
     - questing
   pocket: universe
-  ppa: mayaflux/mayaflux-dev
+  ppa: mayaflux/mayaflux-edge
   distribution: questing/main

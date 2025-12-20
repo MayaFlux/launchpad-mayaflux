@@ -1,4 +1,4 @@
-Source: mayaflux-dev
+Source: mayaflux-edge
 Section: devel
 Priority: optional
 Maintainer: MayaFlux Collective <mayafluxcollective@proton.me>
@@ -38,7 +38,7 @@ Homepage: https://github.com/MayaFlux/MayaFlux
 Vcs-Browser: https://github.com/MayaFlux/MayaFlux
 Vcs-Git: https://github.com/MayaFlux/MayaFlux.git
 
-Package: mayaflux-dev
+Package: mayaflux-edge
 Architecture: any
 Depends:
     ${shlibs:Depends},
@@ -71,7 +71,7 @@ Depends:
     libavformat-dev,
     libswscale-dev
 Suggests:
-    mayaflux-dev-doc
+    mayaflux-edge-doc
 Description: Modern C++ framework for real-time graphics and audio with JIT
  MayaFlux is a modern C++23 framework for real-time graphics and audio
  processing with JIT compilation and live coding capabilities.
@@ -79,7 +79,7 @@ Description: Modern C++ framework for real-time graphics and audio with JIT
  This package includes the full development and header stack required
  at runtime for JIT compilation and live C++ coding features.
 
-Package: mayaflux-dev-doc
+Package: mayaflux-edge-doc
 Architecture: all
 Section: doc
 Depends: ${misc:Depends}
